@@ -30,7 +30,7 @@ jobs:
           set -euo pipefail; set +H
           {
             printf "## Rapport\n\n### Métriques\n\n\`\`\`json\n"
-            [ -s metrics.json ] && cat metrics.json || printf '{}\n'
+            [ -s reports/metrics.json ] && cat reports/metrics.json || printf '{}\n'
             printf "\n\`\`\`\n\n"
             for img in reports/confusion_matrix.png reports/feature_importance.png; do
               [ -f "$img" ] && printf '![inline](%s)\n' "$img"
