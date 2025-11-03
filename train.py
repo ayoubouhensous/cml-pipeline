@@ -16,7 +16,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # 3️⃣ Entraînement du modèle
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+model = RandomForestClassifier(n_estimators=(50), random_state=42)
 model.fit(X_train, y_train)
 
 # 4️⃣ Évaluation
@@ -30,7 +30,7 @@ joblib.dump(model, 'models/digits_model.pkl')
 # 6️⃣ Sauvegarder les métriques
 metrics = {
     "accuracy": accuracy,
-    "n_estimators": 100,
+    "n_estimators": 50,
     "test_size": len(X_test),
     "precision_weighted": report["weighted avg"]["precision"],
     "recall_weighted": report["weighted avg"]["recall"]
