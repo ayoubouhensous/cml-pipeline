@@ -39,7 +39,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # 3) modèle
-model_path = BASE_DIR / "models" / "iris_model.pkl"
+model_path = BASE_DIR / "models" / "digits_model.pkl"
 print("🔎 loading model from :", model_path)
 model = joblib.load(model_path)
 
