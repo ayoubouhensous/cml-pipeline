@@ -25,7 +25,7 @@ accuracy = accuracy_score(y_test, y_pred)
 report = classification_report(y_test, y_pred, output_dict=True)
 
 # 5️⃣ Sauvegarder le modèle
-joblib.dump(model, 'models/iris_model.pkl')
+joblib.dump(model, 'models/digits_model.pkl')
 
 # 6️⃣ Sauvegarder les métriques
 metrics = {
